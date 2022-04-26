@@ -1,0 +1,83 @@
+// find table row-id using index
+<table id="tableId">
+    <tr id="a">
+        <td>a</td>
+    </tr>
+    <tr id="b">
+        <td>b</td>
+    </tr>
+</table>
+var table = document.getElementById("tableId");
+var row = table.rows[index];
+console.log(row.id);
+
+///================
+
+function seeDetails(e) {
+    console.log("got you:", e);
+    var table = document.getElementById("table");
+    var tr = table.getElementsByTagName("tr");
+    var td = null;
+
+    for (var i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (var n = 0; n < td.length; n++) {
+            td[n].onclick = function () { alert(this.innerHTML); }
+        }
+    }
+}
+
+///=================
+      td.setAttribute("class", "cell-data")
+        td.innerHTML = data[i].rowId;
+        td.innerHTML = data[i].name;
+        td.innerHTML = data[i].age;
+        td.innerHTML = data[i].gender;
+        td.innerHTML = data[i].Menu;
+        td.innerHTML = `<button
+         id="submitBtn"
+         onclick= "seeDetails(this)"
+         type="submit"
+         class="btn btn-primary btn-sm"
+       >
+         See Details
+       </button>`;
+        console.log(td.length);
+
+
+        ///===================
+
+
+        let tbody = document.getElementById("showData")
+        let tr = document.createElement("tr")
+        let td = document.createElement("td");
+        tbody.appendChild(tr);
+        // tr.appendChild(td)
+        // console.log(tr.childElementCount);
+        // let cellNumber = tr.childElementCount;
+        for (let j = 0; j < 6; j++) {
+            let cellField = tr.appendChild(td)
+            cellField.setAttribute("class", "cell-data");
+            console.log(cellField);
+        }
+
+///==============
+
+// see Details
+/*
+function seeDetails(e) {
+    console.log("clicked", e)
+    let table = document.getElementById("table")
+    if (table !== null) {
+        for (let i = 0; i < table.rows.length; i++) {
+            table.rows[i].onclick = function () {
+                // tableText(this)
+                console.log(this);
+            }
+        }
+    }
+}
+function tableText(tableRow) {
+    console.log(tableRow);
+}
+*/
