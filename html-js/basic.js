@@ -95,7 +95,8 @@ function seeDetails(e) {
                 console.log("==>", this.childNodes[1].innerText);
                 console.log("==>", this.childNodes[2].innerText);
                 console.log("==>", this.childNodes[3].innerText);
-                console.log("==>", this.childNodes[4].innerText);
+                console.log("==>", this.childNodes[4
+                ].innerText);
             }
         }
     }
